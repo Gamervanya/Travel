@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      
+    </title>
+    <style>
+      .wrapper{
+        text-align:center;
+        background-color:#C3C5F2;
+      }
+      .input_field{
+        
+      }
+      .Submit{
+        
+      }
+      #error_message{
+        color:red;
+        text-align:center;
+      }
+    </style>
+    
+    <script>
+      function validate() {
+      var name1=document.getElementById("name").value;
+      if(name1.length<5){
+        error_message.innerHTML="please enter name";
+       // alert("please enter name");//
+        return false;
+      }
+      var phone1=document.getElementById("Phone").value;
+      if(isNaN(phone1)||phone1.length!=10){
+        alert("please enter a valid phone no");
+        return false;
+      }
+      var email1=document.getElementById("Email").value;
+      if(email1.indexOf("@")==-1||email1.indexOf("@")==0||email1.indexOf("@")==email1.length-1){
+        alert("please enter a valid email");
+        return false;
+      }
+      return true;
+      }
+    </script>
+  </head>
+  <body>
+   
+    <div class="wrapper">
+      <h2> Contact Us </h2>
+      <form id="my_form" onsubmit="return validate()">
+       <div class="input_field">
+        <input type="text" id="name" placeholder="Name"> 
+       </div> 
+       <br>
+       <div class="input_field">
+        <input type="text" id="Phone" placeholder="Phone"> 
+       </div> 
+       <br>
+       <div class="input_field">
+        <input type="text" id="Email" placeholder="Email"> 
+       </div>
+       <br>
+       <div class="input_field">
+        <textarea id="Message" placeholder="Message"> 
+        </textarea>
+       </div>
+        <div id="error_message">
+      </div>
+       <br>
+       <div class="Submit">
+         <input type="submit">
+       </div>
+      </form>
+    </div>
+  </body>
+</html>
