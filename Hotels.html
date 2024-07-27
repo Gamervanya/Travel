@@ -5,15 +5,66 @@
       Hotels
     </title>
     <style>
+.header
+{
+background-color:#C3C5F2;
+padding:5px;
+text-align:center;
+display:flex;
+}
+.header div{
+padding:5px 5px;
+width:33%;
+float:left;
+}
+nav ul{
+list-style-type:none;
+margin:0px;
+padding:0px;
+}
+nav li{
+display:inline-block;
+margin-left:20px;
+padding-top:20px;
+position:relative;
+}
+nav{
+float:right;
+}
+nav a{
+color:#03045e;
+text-decoration:none;
+text-transform:uppercase;
+font-size:14px;
+}
+nav a:before{
+content:"";
+display:block;
+height:5px;
+background-color:#8487CE;
+position:absolute;
+top:0;
+width:0%;
+transition:all ease-in-out 250ms;
+}
+nav a:hover:before{
+width:100%;
+}
+nav a:hover{
+color:#C3C5F2;
+}
+
     
     th,td
       {
         border:1px solid #BA9FBE;
         border-radius:10px;
         background-color:#E8D2E3; 
+        padding:10px;
       }
       table{
         width:100%;
+       
       }
       #div1{
         Width:100%;
@@ -27,12 +78,28 @@
     transform: rotate (180deg);
     }
     img{
-    width:60%;
     box-shadow:2px 2px black;
     }
     </style>
   </head>
   <body>
+<div class="header">
+<div  style="float:left; padding:20px">
+<img src="https://www.shutterstock.com/image-vector/paris-banner-grunge-effect-french-260nw-1612250809.jpg" width="50px">
+</div>
+<div>
+<h1 style="text-shadow:2px 2px grey">MY Travel Website</h1>
+</div>
+<div>
+<nav>
+<ul>
+<li><a href="Travel.html">Home</a></li>
+<li><a href="Hotels.html">Hotels</a></li>
+<li><a href="Contacts.html">Contacts</a></li>
+</ul>
+</nav>
+</div>
+</div>
     <h1 style="text-shadow:2px 2px grey; background-color:#BA9FBE; border-radius:10px;"> Hotels To Stay At In Paris</h1>
     <div id="div1">
       <img src="https://tse4.mm.bing.net/th?id=OIP.a3UiMHOnVWH8RzBmPpLSpwHaEK&pid=Api&P=0&h=180">
