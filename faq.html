@@ -5,13 +5,164 @@
       FAQ Page
     </title>
     <style>
-      
+     .header{
+   background-color:#C3C5F2;
+   padding:5px;
+   text-align:center;
+   display:flex;
+   }
+       .header div{
+   padding:5px 5px;
+   width:33%;
+   float:left;
+   }
+      nav ul{
+list-style-type:none;
+margin:0px;
+padding:0px;
+}
+       nav li{
+display:inline-block;
+margin-left:20px;
+padding-top:20px;
+position:relative;
+}
+       nav{
+float:right;
+}
+        nav a{
+color:#03045e;
+text-decoration:none;
+text-transform:uppercase;
+font-size:14px;
+}
+        nav a:before{
+content:"";
+display:block;
+height:5px;
+background-color:#8487CE;
+position:absolute;
+top:0;
+width:0%;
+transition:all ease-in-out 250ms;
+}
+      nav a:hover:before{
+width:100%;
+}
+      nav a:hover{
+color:#AF73D3;
+}
+     h1{
+       text-align:center;
+       text-shadow:2px 2px grey;
+     } 
+     #faq{
+       background-color:#BBB9F3;
+     }
+
+
+#faq-list {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-list-item {
+  margin:10px;
+  border-bottom:1px solid black;
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+}
+
+.faq-list-item h3 {
+  font-size: 14px;
+}
+
+.faq-list-item span {
+  position:absolute;
+  top:0;
+  right:5px;
+  color:black;
+  font-size:13px;
+}
+
+.answer {
+  font-size: 12px;
+  display: none;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+}
     </style>
     <script>
+    $(fuction(){
+      
+      $('.faq-list-item').click(function() {
+    var $answer = $(this).find('.answer');
+    if($answer.hasClass('open')) { 
+      $answer.removeClass('open');
+      $answer.slideUp();
+      $(this).find('span').text('+');
+    } else {
+      $answer.addClass('open'); 
+      $answer.slideDown();
+      $(this).find('span').text('-');
+    }
+      });
+    })
       
     </script>   
   </head>
   <body>
+   <div class="header">
+   <div  style="float:left; padding:20px">
+    <img src="https://www.shutterstock.com/image-vector/paris-banner-grunge-effect-french-260nw-1612250809.jpg" width="50px" class="img2">
+  </div>
+   <div>
+   <h1 style="text-shadow:2px 2px grey">MY Travel Website</h1>
+  </div>
+   <div>
+   <nav>
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Hotels.html">Hotels</a></li>
+<li><a href="Contacts.html">Contacts</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul>
+</nav>
+</div>
+</div>
+    <div id="faq">
+      <h1>FAQ Page</h1>
+      <div class="faq">
+        <ul id="faq-list">
+          <li class="faq-list-item">
+            <h3 class="question">Who created this weebsite?</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>Vanya</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">Is Vanya a boy or a girl?</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>She's a girl</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">How old is Vanya?</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>She's 15 years old.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <br>
+    </div>
     
   </body>
 </html>
