@@ -54,7 +54,6 @@ width:100%;
 nav a:hover{
 color:#AF73D3;
 }
-
       .wrapper{
         text-align:center;
         background-color:#C3C5F2;
@@ -65,10 +64,6 @@ color:#AF73D3;
       .Submit{
         
       }
-      #error_message{
-        color:red;
-        text-align:center;
-      }
      
        .div1{
        height:50px;
@@ -76,15 +71,15 @@ color:#AF73D3;
        background: lightblue;
        border-radius:50%;
        position:absolute;
-       animation: circle-animation 10s infinite;
+       animation: circle-animation 20s infinite;
       }
        
         @keyframes circle-animation{
-      0% {top:0px; left:100px; border-radius:50%} 
-      25%{top:100px; left:100px; border-radius:30%;}
-      50%{top:1000px; left:100px; background: lavender;}
-      75%{top:0px; left:100px; border-radius:40%;}
-      100%{top:0px; left:100px; }
+      0% {top:100px; left:100px; border-radius:50%} 
+      25%{top:500px; left:100px; border-radius:30%;}
+      50%{top:500px; left:1500px; background: lavender;}
+      75%{top:100px; left:1500px; border-radius:40%;}
+      100%{top:10px; left:0px; }
       }
     </style>
     
@@ -123,13 +118,16 @@ color:#AF73D3;
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="Hotels.html">Hotels</a></li>
-<li><a href="Contacts.html">Contacts</a></li>
+<li><a href="#">Contacts</a></li>
   <li><a href="faq.html">FAQ</a></li>
 </ul>
 </nav>
+<br>
 </div>
 </div>
-
+<div>
+<img src="https://tse1.mm.bing.net/th?id=OIP.OHlRCP4UKFYoTaMguZw7NQHaCU&pid=Api&P=0&h=180" width="100%">
+</div>
     <div class="wrapper">
       <h2> Contact Us </h2>
       <form id="my_form" onsubmit="return validate()">
@@ -154,6 +152,7 @@ color:#AF73D3;
        <br>
        <div class="Submit">
          <input type="submit">
+        <br>
        </div>
       <div class="div1"></div>
       </form>
